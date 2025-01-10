@@ -21,8 +21,10 @@ process.Exited += (_, _) =>
 var dpiShifter = new DpiShifter();
 dpiShifter.Initialize(process);
 
-Console.WriteLine($"Enable DPI shifter code address: {dpiShifter.EnableDpiShiftCodeAddress:x8}");
-Console.WriteLine($"Disable DPI shifter code address: {dpiShifter.EnableDpiShiftCodeAddress:x8}");
+Console.WriteLine($"Enable DPI shifter original function address: {dpiShifter.EnableDpiShiftOriginalFunctionAddress:x8}");
+Console.WriteLine($"Disable DPI shifter original function address: {dpiShifter.DisableDpiShiftOriginalFunctionAddress:x8}");
+Console.WriteLine($"Enable DPI shifter hook address: {dpiShifter.EnableDpiShiftCodeAddress:x8}");
+Console.WriteLine($"Disable DPI shifter hook address: {dpiShifter.EnableDpiShiftCodeAddress:x8}");
 
 ConsoleClosedHandler.OnConsoleClosed += (_, _) =>
 {
